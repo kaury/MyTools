@@ -94,7 +94,6 @@ namespace MyTools
             txt_OnePulseTime.Text = CTime.ToString();
             txt_TimePerkWh.Text = seconds.ToString();
             txt_MinPerkWh.Text = (seconds / 60F).ToString();
-            
         }
     }
 }
