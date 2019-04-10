@@ -95,5 +95,11 @@ namespace MyTools
             txt_TimePerkWh.Text = seconds.ToString();
             txt_MinPerkWh.Text = (seconds / 60F).ToString();
         }
+
+        private void btn_PicZip_Click(object sender, EventArgs e)
+        {
+            PicHelper.GetPicThumbnail(txt_PicFullName.Text, @"D:\S\Pictures\ziptmp.png", 100, 400, 100);
+            //PicHelper.CutImageWhitePart(@"D:\S\Pictures\ziptmp.png", 0);
+        }
     }
 }

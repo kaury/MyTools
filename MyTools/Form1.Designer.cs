@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_CvtDec2Hex2 = new System.Windows.Forms.Button();
             this.txtHexRst2 = new System.Windows.Forms.TextBox();
@@ -92,7 +93,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txt_U = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txt_PicFullName = new System.Windows.Forms.TextBox();
+            this.btn_PicZip = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -100,12 +103,14 @@
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -125,6 +130,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "数制运算";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Location = new System.Drawing.Point(6, 204);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(422, 100);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "弧度";
             // 
             // groupBox2
             // 
@@ -736,14 +750,34 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "U";
             // 
-            // groupBox5
+            // tabPage3
             // 
-            this.groupBox5.Location = new System.Drawing.Point(6, 204);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(422, 100);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "弧度";
+            this.tabPage3.Controls.Add(this.txt_PicFullName);
+            this.tabPage3.Controls.Add(this.btn_PicZip);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(792, 424);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "图像处理";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // txt_PicFullName
+            // 
+            this.txt_PicFullName.Location = new System.Drawing.Point(84, 23);
+            this.txt_PicFullName.Name = "txt_PicFullName";
+            this.txt_PicFullName.Size = new System.Drawing.Size(251, 20);
+            this.txt_PicFullName.TabIndex = 1;
+            this.txt_PicFullName.Text = "D:\\S\\Pictures\\pic1.bmp";
+            // 
+            // btn_PicZip
+            // 
+            this.btn_PicZip.Location = new System.Drawing.Point(341, 23);
+            this.btn_PicZip.Name = "btn_PicZip";
+            this.btn_PicZip.Size = new System.Drawing.Size(75, 23);
+            this.btn_PicZip.TabIndex = 0;
+            this.btn_PicZip.Text = "压缩";
+            this.btn_PicZip.UseVisualStyleBackColor = true;
+            this.btn_PicZip.Click += new System.EventHandler(this.btn_PicZip_Click);
             // 
             // Form1
             // 
@@ -764,6 +798,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -835,6 +871,9 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox cmb_LC;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btn_PicZip;
+        private System.Windows.Forms.TextBox txt_PicFullName;
     }
 }
 
