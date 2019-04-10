@@ -66,13 +66,14 @@ namespace MyTools
 
             Bitmap ob = new Bitmap(actualSize ? sW : dWidth, actualSize ? sH : dHeight);
             Graphics g = Graphics.FromImage(ob);
-            g.Clear(Color.Transparent);
+            g.Clear(Color.White);
             g.CompositingQuality = CompositingQuality.HighQuality;
             g.SmoothingMode = SmoothingMode.HighQuality;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.DrawImage(iSource, new Rectangle(actualSize ? 0 : (dWidth - sW) / 2, actualSize ? 0 : (dHeight - sH) / 2, sW, sH), 0, 0, iSource.Width, iSource.Height, GraphicsUnit.Pixel);
             g.Dispose();
             ob = CutImageWhitePart(ob, 3);
+            ob.MakeTransparent();
             ob.MakeTransparent(Color.White);
             //以下代码为保存图片时，设置压缩质量
             EncoderParameters ep = new EncoderParameters();
