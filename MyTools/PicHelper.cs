@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -342,6 +343,35 @@ namespace MyTools
         {
             if (c.A > 0 || c.R > 0 || c.G > 0 || c.B > 0) return true;
             else return false;
+        }
+
+        public static System.Windows.Media.Imaging.BitmapImage GetImage(string imagePath)
+        {
+            System.Windows.Media.Imaging.BitmapImage bitmap = new System.Windows.Media.Imaging.BitmapImage();
+            if (System.IO.File.Exists(imagePath))
+            {
+                bitmap.BeginInit();
+                bitmap.CacheOption = System.Windows.Media.Imaging.BitmapCacheOption.OnLoad;
+                using (Stream ms = new MemoryStream(System.IO.File.ReadAllBytes(imagePath)))
+                {
+                    bitmap.StreamSource = ms;
+                    bitmap.EndInit();
+                    bitmap.Freeze();
+                }
+            }
+            return bitmap;
+        }
+        public static System.Drawing.Bitmap GetBitmap(string imagePath)
+        {
+            if (System.IO.File.Exists(imagePath))
+            {
+                using (Stream ms = new MemoryStream(System.IO.File.ReadAllBytes(imagePath)))
+                {
+                    System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(ms);
+                    return bitmap;
+                }
+            }
+            return null;
         }
     }
 }
