@@ -125,13 +125,19 @@
             this.txt_PicFullName = new System.Windows.Forms.TextBox();
             this.btn_PicZip = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.Txt_Data = new System.Windows.Forms.TextBox();
-            this.Rtxt_View = new System.Windows.Forms.RichTextBox();
-            this.Btn_DFT = new System.Windows.Forms.Button();
-            this.Txt_N = new System.Windows.Forms.TextBox();
-            this.Btn_Count = new System.Windows.Forms.Button();
-            this.Txt_THD = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
+            this.Txt_THD = new System.Windows.Forms.TextBox();
+            this.Btn_Count = new System.Windows.Forms.Button();
+            this.Txt_N = new System.Windows.Forms.TextBox();
+            this.Btn_DFT = new System.Windows.Forms.Button();
+            this.Rtxt_View = new System.Windows.Forms.RichTextBox();
+            this.Txt_Data = new System.Windows.Forms.TextBox();
+            this.Rtxt_iHD = new System.Windows.Forms.RichTextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.Rtxt_iPhi = new System.Windows.Forms.RichTextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -1107,11 +1113,17 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label45);
+            this.tabPage4.Controls.Add(this.label44);
+            this.tabPage4.Controls.Add(this.label43);
+            this.tabPage4.Controls.Add(this.label42);
             this.tabPage4.Controls.Add(this.label41);
             this.tabPage4.Controls.Add(this.Txt_THD);
             this.tabPage4.Controls.Add(this.Btn_Count);
             this.tabPage4.Controls.Add(this.Txt_N);
             this.tabPage4.Controls.Add(this.Btn_DFT);
+            this.tabPage4.Controls.Add(this.Rtxt_iPhi);
+            this.tabPage4.Controls.Add(this.Rtxt_iHD);
             this.tabPage4.Controls.Add(this.Rtxt_View);
             this.tabPage4.Controls.Add(this.Txt_Data);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -1119,49 +1131,25 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(792, 389);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "DFT";
+            this.tabPage4.Text = "傅里叶分析";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // Txt_Data
+            // label41
             // 
-            this.Txt_Data.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Txt_Data.Location = new System.Drawing.Point(3, 6);
-            this.Txt_Data.Multiline = true;
-            this.Txt_Data.Name = "Txt_Data";
-            this.Txt_Data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Txt_Data.Size = new System.Drawing.Size(124, 383);
-            this.Txt_Data.TabIndex = 0;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(133, 98);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(23, 12);
+            this.label41.TabIndex = 6;
+            this.label41.Text = "THD";
             // 
-            // Rtxt_View
+            // Txt_THD
             // 
-            this.Rtxt_View.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Rtxt_View.Location = new System.Drawing.Point(214, 6);
-            this.Rtxt_View.Name = "Rtxt_View";
-            this.Rtxt_View.ReadOnly = true;
-            this.Rtxt_View.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.Rtxt_View.Size = new System.Drawing.Size(239, 383);
-            this.Rtxt_View.TabIndex = 1;
-            this.Rtxt_View.Text = "";
-            // 
-            // Btn_DFT
-            // 
-            this.Btn_DFT.Location = new System.Drawing.Point(133, 62);
-            this.Btn_DFT.Name = "Btn_DFT";
-            this.Btn_DFT.Size = new System.Drawing.Size(75, 23);
-            this.Btn_DFT.TabIndex = 2;
-            this.Btn_DFT.Text = "DFT";
-            this.Btn_DFT.UseVisualStyleBackColor = true;
-            this.Btn_DFT.Click += new System.EventHandler(this.Btn_DFT_Click);
-            // 
-            // Txt_N
-            // 
-            this.Txt_N.Location = new System.Drawing.Point(133, 35);
-            this.Txt_N.Name = "Txt_N";
-            this.Txt_N.Size = new System.Drawing.Size(75, 21);
-            this.Txt_N.TabIndex = 3;
-            this.Txt_N.Text = "0";
+            this.Txt_THD.Location = new System.Drawing.Point(133, 113);
+            this.Txt_THD.Name = "Txt_THD";
+            this.Txt_THD.ReadOnly = true;
+            this.Txt_THD.Size = new System.Drawing.Size(75, 21);
+            this.Txt_THD.TabIndex = 5;
             // 
             // Btn_Count
             // 
@@ -1173,22 +1161,106 @@
             this.Btn_Count.UseVisualStyleBackColor = true;
             this.Btn_Count.Click += new System.EventHandler(this.Btn_Count_Click);
             // 
-            // Txt_THD
+            // Txt_N
             // 
-            this.Txt_THD.Location = new System.Drawing.Point(133, 113);
-            this.Txt_THD.Name = "Txt_THD";
-            this.Txt_THD.ReadOnly = true;
-            this.Txt_THD.Size = new System.Drawing.Size(75, 21);
-            this.Txt_THD.TabIndex = 5;
+            this.Txt_N.Location = new System.Drawing.Point(133, 35);
+            this.Txt_N.Name = "Txt_N";
+            this.Txt_N.Size = new System.Drawing.Size(75, 21);
+            this.Txt_N.TabIndex = 3;
+            this.Txt_N.Text = "0";
             // 
-            // label41
+            // Btn_DFT
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(133, 98);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(23, 12);
-            this.label41.TabIndex = 6;
-            this.label41.Text = "THD";
+            this.Btn_DFT.Location = new System.Drawing.Point(133, 62);
+            this.Btn_DFT.Name = "Btn_DFT";
+            this.Btn_DFT.Size = new System.Drawing.Size(75, 23);
+            this.Btn_DFT.TabIndex = 2;
+            this.Btn_DFT.Text = "DFT";
+            this.Btn_DFT.UseVisualStyleBackColor = true;
+            this.Btn_DFT.Click += new System.EventHandler(this.Btn_DFT_Click);
+            // 
+            // Rtxt_View
+            // 
+            this.Rtxt_View.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Rtxt_View.Location = new System.Drawing.Point(214, 21);
+            this.Rtxt_View.Name = "Rtxt_View";
+            this.Rtxt_View.ReadOnly = true;
+            this.Rtxt_View.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.Rtxt_View.Size = new System.Drawing.Size(239, 368);
+            this.Rtxt_View.TabIndex = 1;
+            this.Rtxt_View.Text = "";
+            // 
+            // Txt_Data
+            // 
+            this.Txt_Data.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Txt_Data.Location = new System.Drawing.Point(3, 21);
+            this.Txt_Data.Multiline = true;
+            this.Txt_Data.Name = "Txt_Data";
+            this.Txt_Data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Txt_Data.Size = new System.Drawing.Size(124, 368);
+            this.Txt_Data.TabIndex = 0;
+            // 
+            // Rtxt_iHD
+            // 
+            this.Rtxt_iHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Rtxt_iHD.Location = new System.Drawing.Point(459, 21);
+            this.Rtxt_iHD.Name = "Rtxt_iHD";
+            this.Rtxt_iHD.ReadOnly = true;
+            this.Rtxt_iHD.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.Rtxt_iHD.Size = new System.Drawing.Size(117, 368);
+            this.Rtxt_iHD.TabIndex = 1;
+            this.Rtxt_iHD.Text = "";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(3, 6);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(47, 12);
+            this.label42.TabIndex = 7;
+            this.label42.Text = "Samples";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(214, 6);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(23, 12);
+            this.label43.TabIndex = 8;
+            this.label43.Text = "DFT";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(457, 6);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(119, 12);
+            this.label44.TabIndex = 9;
+            this.label44.Text = "harmonic content(%)";
+            // 
+            // Rtxt_iPhi
+            // 
+            this.Rtxt_iPhi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Rtxt_iPhi.Location = new System.Drawing.Point(582, 21);
+            this.Rtxt_iPhi.Name = "Rtxt_iPhi";
+            this.Rtxt_iPhi.ReadOnly = true;
+            this.Rtxt_iPhi.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.Rtxt_iPhi.Size = new System.Drawing.Size(71, 368);
+            this.Rtxt_iPhi.TabIndex = 1;
+            this.Rtxt_iPhi.Text = "";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(580, 6);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(59, 12);
+            this.label45.TabIndex = 9;
+            this.label45.Text = "phase(°)";
             // 
             // Form1
             // 
@@ -1326,6 +1398,12 @@
         private System.Windows.Forms.Button Btn_Count;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox Txt_THD;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.RichTextBox Rtxt_iHD;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.RichTextBox Rtxt_iPhi;
     }
 }
 

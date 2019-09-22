@@ -113,8 +113,8 @@ namespace MyTools
                     temp = complex.powcc(w[i], j);
                     temp1 = complex.commul(signal[j], temp);
                     f[i] = complex.comsum(f[i], temp1);
-                    f[i].a = Math.Round(f[i].a, 2);
-                    f[i].b = Math.Round(f[i].b, 2);
+                    f[i].a = Math.Round(f[i].a, 4);
+                    f[i].b = Math.Round(f[i].b, 4);
                 }
             }
             return f;
@@ -190,7 +190,22 @@ namespace MyTools
             }
             for (int i = 0; i < n; i++)
             {
-                amp[i] = Math.Round(amp1[i], 2);
+                amp[i] = Math.Round(amp1[i], 4);
+            }
+            return amp;
+        }
+        //求相位 x 信号  n  信号长度  返回 相位数组
+        public static double[] phase(complex[] x, int n)
+        {
+            double[] amp = new double[n];
+            double[] amp1 = new double[n];
+            for (int i = 0; i < n; i++)
+            {
+                amp1[i] = Math.Atan2(x[i].b, x[i].a);
+            }
+            for (int i = 0; i < n; i++)
+            {
+                amp[i] = Math.Round(amp1[i], 3);
             }
             return amp;
         }

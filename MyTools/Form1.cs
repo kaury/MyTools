@@ -167,21 +167,25 @@ namespace MyTools
             for (int i = 0; i < n; i++)
             {
                 if (smps[i].IndexOf(';') < 0) continue;
-                double.TryParse(smps[i].Split(';')[1], out double temp);
-                signal[i] = temp;
+                double.TryParse(smps[i].Split(';')[1], out double stemp);
+                signal[i] = stemp;
             }
             DFT.complex[] complexs = DFT.dft(signal, n);
+            Rtxt_View.Text = string.Join(Environment.NewLine, complexs);
+            double[] phis = DFT.phase(complexs, n);
+            Rtxt_iPhi.Text = string.Join(Environment.NewLine, phis);
             double[] amps = DFT.amplitude(complexs, n);
             double thds = 0;
             double[] pers = new double[n / 2];
+            double temp = 0;
             for (int i = 0; i < n / 2; i++)
             {
-                pers[i] = amps[i] / amps[1] * 100;
-                if (i >= 2)
-                    thds += Math.Pow(pers[i], 2);
+                temp = amps[i] / amps[1] * 100;
+                pers[i] = Math.Round(temp, 2);
+                if (i >= 2) thds += Math.Pow(temp, 2);
             }
-            Txt_THD.Text = Math.Sqrt(thds).ToString("F4");
-            Rtxt_View.Text = string.Join(Environment.NewLine, pers);
+            Txt_THD.Text = Math.Round(Math.Sqrt(thds), 2).ToString();
+            Rtxt_iHD.Text = string.Join(Environment.NewLine, pers);
         }
 
         private void Btn_Count_Click(object sender, EventArgs e)
