@@ -125,19 +125,58 @@
             this.txt_PicFullName = new System.Windows.Forms.TextBox();
             this.btn_PicZip = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.Txt_THD = new System.Windows.Forms.TextBox();
             this.Btn_Count = new System.Windows.Forms.Button();
             this.Txt_N = new System.Windows.Forms.TextBox();
             this.Btn_DFT = new System.Windows.Forms.Button();
+            this.Rtxt_iPhi = new System.Windows.Forms.RichTextBox();
+            this.Rtxt_iHD = new System.Windows.Forms.RichTextBox();
             this.Rtxt_View = new System.Windows.Forms.RichTextBox();
             this.Txt_Data = new System.Windows.Forms.TextBox();
-            this.Rtxt_iHD = new System.Windows.Forms.RichTextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.Rtxt_iPhi = new System.Windows.Forms.RichTextBox();
-            this.label45 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txt_scUa = new System.Windows.Forms.TextBox();
+            this.txt_scPhiUa = new System.Windows.Forms.TextBox();
+            this.txt_scIa = new System.Windows.Forms.TextBox();
+            this.txt_scPhiIa = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txt_scUb = new System.Windows.Forms.TextBox();
+            this.txt_scPhiUb = new System.Windows.Forms.TextBox();
+            this.txt_scIb = new System.Windows.Forms.TextBox();
+            this.txt_scPhiIb = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.txt_scUc = new System.Windows.Forms.TextBox();
+            this.txt_scPhiUc = new System.Windows.Forms.TextBox();
+            this.txt_scIc = new System.Windows.Forms.TextBox();
+            this.txt_scPhiIc = new System.Windows.Forms.TextBox();
+            this.Btn_CalcSequenceComponent = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txt_scPositiveU = new System.Windows.Forms.TextBox();
+            this.txt_scPositivePhiU = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.txt_scNegativeU = new System.Windows.Forms.TextBox();
+            this.txt_scNegativePhiU = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txt_scZeroU = new System.Windows.Forms.TextBox();
+            this.txt_scZeroPhiU = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.txt_scPositiveI = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.txt_scNegativeI = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txt_scZeroI = new System.Windows.Forms.TextBox();
+            this.txt_scPositivePhiI = new System.Windows.Forms.TextBox();
+            this.txt_scNegativePhiI = new System.Windows.Forms.TextBox();
+            this.txt_scZeroPhiI = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -149,6 +188,8 @@
             this.groupBox3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -161,7 +202,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 415);
+            this.tabControl1.Size = new System.Drawing.Size(830, 415);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -510,20 +551,22 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox8);
+            this.tabPage2.Controls.Add(this.groupBox7);
             this.tabPage2.Controls.Add(this.pic_phase);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 389);
+            this.tabPage2.Size = new System.Drawing.Size(822, 389);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "电表计算";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pic_phase
             // 
-            this.pic_phase.Location = new System.Drawing.Point(487, 113);
+            this.pic_phase.Location = new System.Drawing.Point(464, 113);
             this.pic_phase.Name = "pic_phase";
             this.pic_phase.Size = new System.Drawing.Size(200, 200);
             this.pic_phase.TabIndex = 2;
@@ -568,7 +611,7 @@
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Location = new System.Drawing.Point(6, 103);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(475, 210);
+            this.groupBox4.Size = new System.Drawing.Size(452, 210);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "参考数据";
@@ -1134,6 +1177,42 @@
             this.tabPage4.Text = "傅里叶分析";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(580, 6);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(59, 12);
+            this.label45.TabIndex = 9;
+            this.label45.Text = "phase(°)";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(457, 6);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(119, 12);
+            this.label44.TabIndex = 9;
+            this.label44.Text = "harmonic content(%)";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(214, 6);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(23, 12);
+            this.label43.TabIndex = 8;
+            this.label43.Text = "DFT";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(3, 6);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(47, 12);
+            this.label42.TabIndex = 7;
+            this.label42.Text = "Samples";
+            // 
             // label41
             // 
             this.label41.AutoSize = true;
@@ -1179,6 +1258,30 @@
             this.Btn_DFT.UseVisualStyleBackColor = true;
             this.Btn_DFT.Click += new System.EventHandler(this.Btn_DFT_Click);
             // 
+            // Rtxt_iPhi
+            // 
+            this.Rtxt_iPhi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Rtxt_iPhi.Location = new System.Drawing.Point(582, 21);
+            this.Rtxt_iPhi.Name = "Rtxt_iPhi";
+            this.Rtxt_iPhi.ReadOnly = true;
+            this.Rtxt_iPhi.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.Rtxt_iPhi.Size = new System.Drawing.Size(71, 368);
+            this.Rtxt_iPhi.TabIndex = 1;
+            this.Rtxt_iPhi.Text = "";
+            // 
+            // Rtxt_iHD
+            // 
+            this.Rtxt_iHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Rtxt_iHD.Location = new System.Drawing.Point(459, 21);
+            this.Rtxt_iHD.Name = "Rtxt_iHD";
+            this.Rtxt_iHD.ReadOnly = true;
+            this.Rtxt_iHD.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.Rtxt_iHD.Size = new System.Drawing.Size(117, 368);
+            this.Rtxt_iHD.TabIndex = 1;
+            this.Rtxt_iHD.Text = "";
+            // 
             // Rtxt_View
             // 
             this.Rtxt_View.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1202,71 +1305,388 @@
             this.Txt_Data.Size = new System.Drawing.Size(124, 368);
             this.Txt_Data.TabIndex = 0;
             // 
-            // Rtxt_iHD
+            // groupBox7
             // 
-            this.Rtxt_iHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Rtxt_iHD.Location = new System.Drawing.Point(459, 21);
-            this.Rtxt_iHD.Name = "Rtxt_iHD";
-            this.Rtxt_iHD.ReadOnly = true;
-            this.Rtxt_iHD.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.Rtxt_iHD.Size = new System.Drawing.Size(117, 368);
-            this.Rtxt_iHD.TabIndex = 1;
-            this.Rtxt_iHD.Text = "";
+            this.groupBox7.Controls.Add(this.Btn_CalcSequenceComponent);
+            this.groupBox7.Controls.Add(this.txt_scPhiIc);
+            this.groupBox7.Controls.Add(this.txt_scPhiIb);
+            this.groupBox7.Controls.Add(this.txt_scPhiIa);
+            this.groupBox7.Controls.Add(this.txt_scIc);
+            this.groupBox7.Controls.Add(this.txt_scIb);
+            this.groupBox7.Controls.Add(this.txt_scIa);
+            this.groupBox7.Controls.Add(this.txt_scPhiUc);
+            this.groupBox7.Controls.Add(this.txt_scUc);
+            this.groupBox7.Controls.Add(this.txt_scPhiUb);
+            this.groupBox7.Controls.Add(this.txt_scUb);
+            this.groupBox7.Controls.Add(this.label51);
+            this.groupBox7.Controls.Add(this.txt_scPhiUa);
+            this.groupBox7.Controls.Add(this.label49);
+            this.groupBox7.Controls.Add(this.label50);
+            this.groupBox7.Controls.Add(this.txt_scUa);
+            this.groupBox7.Controls.Add(this.label48);
+            this.groupBox7.Controls.Add(this.label46);
+            this.groupBox7.Controls.Add(this.label47);
+            this.groupBox7.Location = new System.Drawing.Point(487, 7);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(327, 91);
+            this.groupBox7.TabIndex = 3;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "计算序分量";
             // 
-            // label42
+            // txt_scUa
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(3, 6);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(47, 12);
-            this.label42.TabIndex = 7;
-            this.label42.Text = "Samples";
+            this.txt_scUa.Location = new System.Drawing.Point(29, 19);
+            this.txt_scUa.Name = "txt_scUa";
+            this.txt_scUa.Size = new System.Drawing.Size(47, 21);
+            this.txt_scUa.TabIndex = 0;
+            this.txt_scUa.Text = "220";
             // 
-            // label43
+            // txt_scPhiUa
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(214, 6);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(23, 12);
-            this.label43.TabIndex = 8;
-            this.label43.Text = "DFT";
+            this.txt_scPhiUa.Location = new System.Drawing.Point(82, 19);
+            this.txt_scPhiUa.Name = "txt_scPhiUa";
+            this.txt_scPhiUa.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPhiUa.TabIndex = 0;
+            this.txt_scPhiUa.Text = "0";
             // 
-            // label44
+            // txt_scIa
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(457, 6);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(119, 12);
-            this.label44.TabIndex = 9;
-            this.label44.Text = "harmonic content(%)";
+            this.txt_scIa.Location = new System.Drawing.Point(167, 19);
+            this.txt_scIa.Name = "txt_scIa";
+            this.txt_scIa.Size = new System.Drawing.Size(47, 21);
+            this.txt_scIa.TabIndex = 0;
+            this.txt_scIa.Text = "5";
             // 
-            // Rtxt_iPhi
+            // txt_scPhiIa
             // 
-            this.Rtxt_iPhi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Rtxt_iPhi.Location = new System.Drawing.Point(582, 21);
-            this.Rtxt_iPhi.Name = "Rtxt_iPhi";
-            this.Rtxt_iPhi.ReadOnly = true;
-            this.Rtxt_iPhi.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.Rtxt_iPhi.Size = new System.Drawing.Size(71, 368);
-            this.Rtxt_iPhi.TabIndex = 1;
-            this.Rtxt_iPhi.Text = "";
+            this.txt_scPhiIa.Location = new System.Drawing.Point(220, 19);
+            this.txt_scPhiIa.Name = "txt_scPhiIa";
+            this.txt_scPhiIa.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPhiIa.TabIndex = 0;
+            this.txt_scPhiIa.Text = "0";
             // 
-            // label45
+            // label46
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(580, 6);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(59, 12);
-            this.label45.TabIndex = 9;
-            this.label45.Text = "phase(°)";
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(6, 22);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(17, 12);
+            this.label46.TabIndex = 0;
+            this.label46.Text = "Ua";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(144, 22);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(17, 12);
+            this.label47.TabIndex = 0;
+            this.label47.Text = "Ia";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(144, 45);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(17, 12);
+            this.label48.TabIndex = 0;
+            this.label48.Text = "Ib";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(6, 45);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(17, 12);
+            this.label49.TabIndex = 0;
+            this.label49.Text = "Ub";
+            // 
+            // txt_scUb
+            // 
+            this.txt_scUb.Location = new System.Drawing.Point(29, 42);
+            this.txt_scUb.Name = "txt_scUb";
+            this.txt_scUb.Size = new System.Drawing.Size(47, 21);
+            this.txt_scUb.TabIndex = 0;
+            this.txt_scUb.Text = "220";
+            // 
+            // txt_scPhiUb
+            // 
+            this.txt_scPhiUb.Location = new System.Drawing.Point(82, 42);
+            this.txt_scPhiUb.Name = "txt_scPhiUb";
+            this.txt_scPhiUb.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPhiUb.TabIndex = 0;
+            this.txt_scPhiUb.Text = "240";
+            // 
+            // txt_scIb
+            // 
+            this.txt_scIb.Location = new System.Drawing.Point(167, 42);
+            this.txt_scIb.Name = "txt_scIb";
+            this.txt_scIb.Size = new System.Drawing.Size(47, 21);
+            this.txt_scIb.TabIndex = 0;
+            this.txt_scIb.Text = "5";
+            // 
+            // txt_scPhiIb
+            // 
+            this.txt_scPhiIb.Location = new System.Drawing.Point(220, 42);
+            this.txt_scPhiIb.Name = "txt_scPhiIb";
+            this.txt_scPhiIb.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPhiIb.TabIndex = 0;
+            this.txt_scPhiIb.Text = "240";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(144, 67);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(17, 12);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Ic";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(6, 67);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(17, 12);
+            this.label51.TabIndex = 0;
+            this.label51.Text = "Uc";
+            // 
+            // txt_scUc
+            // 
+            this.txt_scUc.Location = new System.Drawing.Point(29, 64);
+            this.txt_scUc.Name = "txt_scUc";
+            this.txt_scUc.Size = new System.Drawing.Size(47, 21);
+            this.txt_scUc.TabIndex = 0;
+            this.txt_scUc.Text = "220";
+            // 
+            // txt_scPhiUc
+            // 
+            this.txt_scPhiUc.Location = new System.Drawing.Point(82, 64);
+            this.txt_scPhiUc.Name = "txt_scPhiUc";
+            this.txt_scPhiUc.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPhiUc.TabIndex = 0;
+            this.txt_scPhiUc.Text = "120";
+            // 
+            // txt_scIc
+            // 
+            this.txt_scIc.Location = new System.Drawing.Point(167, 64);
+            this.txt_scIc.Name = "txt_scIc";
+            this.txt_scIc.Size = new System.Drawing.Size(47, 21);
+            this.txt_scIc.TabIndex = 0;
+            this.txt_scIc.Text = "5";
+            // 
+            // txt_scPhiIc
+            // 
+            this.txt_scPhiIc.Location = new System.Drawing.Point(220, 64);
+            this.txt_scPhiIc.Name = "txt_scPhiIc";
+            this.txt_scPhiIc.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPhiIc.TabIndex = 0;
+            this.txt_scPhiIc.Text = "120";
+            // 
+            // Btn_CalcSequenceComponent
+            // 
+            this.Btn_CalcSequenceComponent.Location = new System.Drawing.Point(273, 62);
+            this.Btn_CalcSequenceComponent.Name = "Btn_CalcSequenceComponent";
+            this.Btn_CalcSequenceComponent.Size = new System.Drawing.Size(48, 23);
+            this.Btn_CalcSequenceComponent.TabIndex = 1;
+            this.Btn_CalcSequenceComponent.Text = "计算";
+            this.Btn_CalcSequenceComponent.UseVisualStyleBackColor = true;
+            this.Btn_CalcSequenceComponent.Click += new System.EventHandler(this.Btn_CalcSequenceComponent_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.txt_scZeroPhiI);
+            this.groupBox8.Controls.Add(this.txt_scZeroPhiU);
+            this.groupBox8.Controls.Add(this.txt_scNegativePhiI);
+            this.groupBox8.Controls.Add(this.txt_scNegativePhiU);
+            this.groupBox8.Controls.Add(this.txt_scPositivePhiI);
+            this.groupBox8.Controls.Add(this.txt_scPositivePhiU);
+            this.groupBox8.Controls.Add(this.txt_scZeroI);
+            this.groupBox8.Controls.Add(this.txt_scZeroU);
+            this.groupBox8.Controls.Add(this.label57);
+            this.groupBox8.Controls.Add(this.label54);
+            this.groupBox8.Controls.Add(this.txt_scNegativeI);
+            this.groupBox8.Controls.Add(this.txt_scNegativeU);
+            this.groupBox8.Controls.Add(this.label56);
+            this.groupBox8.Controls.Add(this.label52);
+            this.groupBox8.Controls.Add(this.txt_scPositiveI);
+            this.groupBox8.Controls.Add(this.label55);
+            this.groupBox8.Controls.Add(this.txt_scPositiveU);
+            this.groupBox8.Controls.Add(this.label53);
+            this.groupBox8.Location = new System.Drawing.Point(670, 103);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(144, 210);
+            this.groupBox8.TabIndex = 4;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "序分量";
+            // 
+            // txt_scPositiveU
+            // 
+            this.txt_scPositiveU.Location = new System.Drawing.Point(37, 20);
+            this.txt_scPositiveU.Name = "txt_scPositiveU";
+            this.txt_scPositiveU.ReadOnly = true;
+            this.txt_scPositiveU.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPositiveU.TabIndex = 0;
+            this.txt_scPositiveU.Text = "220";
+            // 
+            // txt_scPositivePhiU
+            // 
+            this.txt_scPositivePhiU.Location = new System.Drawing.Point(90, 20);
+            this.txt_scPositivePhiU.Name = "txt_scPositivePhiU";
+            this.txt_scPositivePhiU.ReadOnly = true;
+            this.txt_scPositivePhiU.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPositivePhiU.TabIndex = 0;
+            this.txt_scPositivePhiU.Text = "0";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(8, 23);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(23, 12);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "U正";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(8, 46);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(23, 12);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "U负";
+            // 
+            // txt_scNegativeU
+            // 
+            this.txt_scNegativeU.Location = new System.Drawing.Point(37, 43);
+            this.txt_scNegativeU.Name = "txt_scNegativeU";
+            this.txt_scNegativeU.ReadOnly = true;
+            this.txt_scNegativeU.Size = new System.Drawing.Size(47, 21);
+            this.txt_scNegativeU.TabIndex = 0;
+            this.txt_scNegativeU.Text = "0";
+            // 
+            // txt_scNegativePhiU
+            // 
+            this.txt_scNegativePhiU.Location = new System.Drawing.Point(90, 43);
+            this.txt_scNegativePhiU.Name = "txt_scNegativePhiU";
+            this.txt_scNegativePhiU.ReadOnly = true;
+            this.txt_scNegativePhiU.Size = new System.Drawing.Size(47, 21);
+            this.txt_scNegativePhiU.TabIndex = 0;
+            this.txt_scNegativePhiU.Text = "0";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(8, 69);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(23, 12);
+            this.label54.TabIndex = 0;
+            this.label54.Text = "U零";
+            // 
+            // txt_scZeroU
+            // 
+            this.txt_scZeroU.Location = new System.Drawing.Point(37, 66);
+            this.txt_scZeroU.Name = "txt_scZeroU";
+            this.txt_scZeroU.ReadOnly = true;
+            this.txt_scZeroU.Size = new System.Drawing.Size(47, 21);
+            this.txt_scZeroU.TabIndex = 0;
+            this.txt_scZeroU.Text = "0";
+            // 
+            // txt_scZeroPhiU
+            // 
+            this.txt_scZeroPhiU.Location = new System.Drawing.Point(90, 66);
+            this.txt_scZeroPhiU.Name = "txt_scZeroPhiU";
+            this.txt_scZeroPhiU.ReadOnly = true;
+            this.txt_scZeroPhiU.Size = new System.Drawing.Size(47, 21);
+            this.txt_scZeroPhiU.TabIndex = 0;
+            this.txt_scZeroPhiU.Text = "0";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(8, 96);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(23, 12);
+            this.label55.TabIndex = 0;
+            this.label55.Text = "I正";
+            // 
+            // txt_scPositiveI
+            // 
+            this.txt_scPositiveI.Location = new System.Drawing.Point(37, 93);
+            this.txt_scPositiveI.Name = "txt_scPositiveI";
+            this.txt_scPositiveI.ReadOnly = true;
+            this.txt_scPositiveI.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPositiveI.TabIndex = 0;
+            this.txt_scPositiveI.Text = "5";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(8, 119);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(23, 12);
+            this.label56.TabIndex = 0;
+            this.label56.Text = "I负";
+            // 
+            // txt_scNegativeI
+            // 
+            this.txt_scNegativeI.Location = new System.Drawing.Point(37, 116);
+            this.txt_scNegativeI.Name = "txt_scNegativeI";
+            this.txt_scNegativeI.ReadOnly = true;
+            this.txt_scNegativeI.Size = new System.Drawing.Size(47, 21);
+            this.txt_scNegativeI.TabIndex = 0;
+            this.txt_scNegativeI.Text = "0";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(8, 142);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(23, 12);
+            this.label57.TabIndex = 0;
+            this.label57.Text = "I零";
+            // 
+            // txt_scZeroI
+            // 
+            this.txt_scZeroI.Location = new System.Drawing.Point(37, 139);
+            this.txt_scZeroI.Name = "txt_scZeroI";
+            this.txt_scZeroI.ReadOnly = true;
+            this.txt_scZeroI.Size = new System.Drawing.Size(47, 21);
+            this.txt_scZeroI.TabIndex = 0;
+            this.txt_scZeroI.Text = "0";
+            // 
+            // txt_scPositivePhiI
+            // 
+            this.txt_scPositivePhiI.Location = new System.Drawing.Point(90, 93);
+            this.txt_scPositivePhiI.Name = "txt_scPositivePhiI";
+            this.txt_scPositivePhiI.ReadOnly = true;
+            this.txt_scPositivePhiI.Size = new System.Drawing.Size(47, 21);
+            this.txt_scPositivePhiI.TabIndex = 0;
+            this.txt_scPositivePhiI.Text = "0";
+            // 
+            // txt_scNegativePhiI
+            // 
+            this.txt_scNegativePhiI.Location = new System.Drawing.Point(90, 116);
+            this.txt_scNegativePhiI.Name = "txt_scNegativePhiI";
+            this.txt_scNegativePhiI.ReadOnly = true;
+            this.txt_scNegativePhiI.Size = new System.Drawing.Size(47, 21);
+            this.txt_scNegativePhiI.TabIndex = 0;
+            this.txt_scNegativePhiI.Text = "0";
+            // 
+            // txt_scZeroPhiI
+            // 
+            this.txt_scZeroPhiI.Location = new System.Drawing.Point(90, 139);
+            this.txt_scZeroPhiI.Name = "txt_scZeroPhiI";
+            this.txt_scZeroPhiI.ReadOnly = true;
+            this.txt_scZeroPhiI.Size = new System.Drawing.Size(47, 21);
+            this.txt_scZeroPhiI.TabIndex = 0;
+            this.txt_scZeroPhiI.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 415);
+            this.ClientSize = new System.Drawing.Size(830, 415);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "我的工具";
@@ -1288,6 +1708,10 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1404,6 +1828,45 @@
         private System.Windows.Forms.RichTextBox Rtxt_iHD;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.RichTextBox Rtxt_iPhi;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox txt_scZeroPhiI;
+        private System.Windows.Forms.TextBox txt_scZeroPhiU;
+        private System.Windows.Forms.TextBox txt_scNegativePhiI;
+        private System.Windows.Forms.TextBox txt_scNegativePhiU;
+        private System.Windows.Forms.TextBox txt_scPositivePhiI;
+        private System.Windows.Forms.TextBox txt_scPositivePhiU;
+        private System.Windows.Forms.TextBox txt_scZeroI;
+        private System.Windows.Forms.TextBox txt_scZeroU;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox txt_scNegativeI;
+        private System.Windows.Forms.TextBox txt_scNegativeU;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox txt_scPositiveI;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox txt_scPositiveU;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button Btn_CalcSequenceComponent;
+        private System.Windows.Forms.TextBox txt_scPhiIc;
+        private System.Windows.Forms.TextBox txt_scPhiIb;
+        private System.Windows.Forms.TextBox txt_scPhiIa;
+        private System.Windows.Forms.TextBox txt_scIc;
+        private System.Windows.Forms.TextBox txt_scIb;
+        private System.Windows.Forms.TextBox txt_scIa;
+        private System.Windows.Forms.TextBox txt_scPhiUc;
+        private System.Windows.Forms.TextBox txt_scUc;
+        private System.Windows.Forms.TextBox txt_scPhiUb;
+        private System.Windows.Forms.TextBox txt_scUb;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox txt_scPhiUa;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txt_scUa;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
     }
 }
 

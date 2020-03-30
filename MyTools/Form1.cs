@@ -194,5 +194,79 @@ namespace MyTools
             string[] smps = Txt_Data.Text.Split('\r');
             Txt_N.Text = smps.Length.ToString();
         }
+
+        private void Btn_CalcSequenceComponent_Click(object sender, EventArgs e)
+        {
+            double.TryParse(txt_scUa.Text, out double Ua);
+            double.TryParse(txt_scPhiUa.Text, out double PhiUa);
+            double.TryParse(txt_scUb.Text, out double Ub);
+            double.TryParse(txt_scPhiUb.Text, out double PhiUb);
+            double.TryParse(txt_scUc.Text, out double Uc);
+            double.TryParse(txt_scPhiUc.Text, out double PhiUc);
+
+            double.TryParse(txt_scIa.Text, out double Ia);
+            double.TryParse(txt_scPhiIa.Text, out double PhiIa);
+            double.TryParse(txt_scIb.Text, out double Ib);
+            double.TryParse(txt_scPhiIb.Text, out double PhiIb);
+            double.TryParse(txt_scIc.Text, out double Ic);
+            double.TryParse(txt_scPhiIc.Text, out double PhiIc);
+
+            PMS.Platform.Utility.VectorHelper vector = new PMS.Platform.Utility.VectorHelper()
+            {
+                UL1Angle = (float)PhiUa,
+                UL2Angle = (float)PhiUb,
+                UL3Angle = (float)PhiUc,
+                IL1Angle = (float)PhiIa,
+                IL2Angle = (float)PhiIb,
+                IL3Angle = (float)PhiIc,
+            };
+            if (vector.DrawVector()) pic_phase.Image = PicHelper.GetBitmap(vector.VectorFullPath);
+            else pic_phase.Image = null;
+
+            string format = "F3";
+
+            {
+                Polar vUa = new Polar(Ua, PhiUa);
+                Polar vUb = new Polar(Ub, PhiUb);
+                Polar vUc = new Polar(Uc, PhiUc);
+
+                Polar vPositiveU = vUa + vUb.Rotate(120) + vUc.Rotate(240);
+
+                txt_scPositiveU.Text = (vPositiveU.Modul / 3).ToString(format);
+                txt_scPositivePhiU.Text = vPositiveU.Angle.ToString(format);
+
+                Polar vNegativeU = vUa + vUb.Rotate(240) + vUc.Rotate(120);
+
+                txt_scNegativeU.Text = (vNegativeU.Modul / 3).ToString(format);
+                txt_scNegativePhiU.Text = vNegativeU.Angle.ToString(format);
+
+                Polar vZeroU = vUa + vUb + vUc;
+
+                txt_scZeroU.Text = (vZeroU.Modul / 3).ToString(format);
+                txt_scZeroPhiU.Text = vZeroU.Angle.ToString(format);
+            }
+
+            {
+                Polar vIa = new Polar(Ia, PhiIa);
+                Polar vIb = new Polar(Ib, PhiIb);
+                Polar vIc = new Polar(Ic, PhiIc);
+
+                Polar vPositiveI = vIa + vIb.Rotate(120) + vIc.Rotate(240);
+
+                txt_scPositiveI.Text = (vPositiveI.Modul / 3).ToString(format);
+                txt_scPositivePhiI.Text = vPositiveI.Angle.ToString(format);
+
+                Polar vNegativeI = vIa + vIb.Rotate(240) + vIc.Rotate(120);
+
+                txt_scNegativeI.Text = (vNegativeI.Modul / 3).ToString(format);
+                txt_scNegativePhiI.Text = vNegativeI.Angle.ToString(format);
+
+                Polar vZeroI = vIa + vIb + vIc;
+
+                txt_scZeroI.Text = (vZeroI.Modul / 3).ToString(format);
+                txt_scZeroPhiI.Text = vZeroI.Angle.ToString(format);
+            }
+
+        }
     }
 }
