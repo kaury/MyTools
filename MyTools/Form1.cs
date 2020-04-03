@@ -225,25 +225,27 @@ namespace MyTools
 
             string format = "F3";
 
+            PhaseSequence sequence = new PhaseSequence();
+
             {
                 Polar vUa = new Polar(Ua, PhiUa);
                 Polar vUb = new Polar(Ub, PhiUb);
                 Polar vUc = new Polar(Uc, PhiUc);
 
-                Polar vPositiveU = vUa + vUb.Rotate(120) + vUc.Rotate(240);
+                PSData vPositiveU = sequence.CalcPositive(vUa, vUb, vUc);
 
-                txt_scPositiveU.Text = (vPositiveU.Modul / 3).ToString(format);
-                txt_scPositivePhiU.Text = vPositiveU.Angle.ToString(format);
+                txt_scPositiveU.Text = vPositiveU.Amplitude.ToString(format);
+                txt_scPositivePhiU.Text = vPositiveU.Phase.ToString(format);
 
-                Polar vNegativeU = vUa + vUb.Rotate(240) + vUc.Rotate(120);
+                PSData vNegativeU = sequence.CalcNegative(vUa, vUb, vUc);
 
-                txt_scNegativeU.Text = (vNegativeU.Modul / 3).ToString(format);
-                txt_scNegativePhiU.Text = vNegativeU.Angle.ToString(format);
+                txt_scNegativeU.Text = vNegativeU.Amplitude.ToString(format);
+                txt_scNegativePhiU.Text = vNegativeU.Phase.ToString(format);
 
-                Polar vZeroU = vUa + vUb + vUc;
+                PSData vZeroU = sequence.CalcZero(vUa, vUb, vUc);
 
-                txt_scZeroU.Text = (vZeroU.Modul / 3).ToString(format);
-                txt_scZeroPhiU.Text = vZeroU.Angle.ToString(format);
+                txt_scZeroU.Text = vZeroU.Amplitude.ToString(format);
+                txt_scZeroPhiU.Text = vZeroU.Phase.ToString(format);
             }
 
             {
@@ -251,20 +253,20 @@ namespace MyTools
                 Polar vIb = new Polar(Ib, PhiIb);
                 Polar vIc = new Polar(Ic, PhiIc);
 
-                Polar vPositiveI = vIa + vIb.Rotate(120) + vIc.Rotate(240);
+                PSData vPositiveI = sequence.CalcPositive(vIa, vIb, vIc);
 
-                txt_scPositiveI.Text = (vPositiveI.Modul / 3).ToString(format);
-                txt_scPositivePhiI.Text = vPositiveI.Angle.ToString(format);
+                txt_scPositiveI.Text = vPositiveI.Amplitude.ToString(format);
+                txt_scPositivePhiI.Text = vPositiveI.Phase.ToString(format);
 
-                Polar vNegativeI = vIa + vIb.Rotate(240) + vIc.Rotate(120);
+                PSData vNegativeI = sequence.CalcNegative(vIa, vIb, vIc);
 
-                txt_scNegativeI.Text = (vNegativeI.Modul / 3).ToString(format);
-                txt_scNegativePhiI.Text = vNegativeI.Angle.ToString(format);
+                txt_scNegativeI.Text = vNegativeI.Amplitude.ToString(format);
+                txt_scNegativePhiI.Text = vNegativeI.Phase.ToString(format);
 
-                Polar vZeroI = vIa + vIb + vIc;
+                PSData vZeroI = sequence.CalcZero(vIa, vIb, vIc);
 
-                txt_scZeroI.Text = (vZeroI.Modul / 3).ToString(format);
-                txt_scZeroPhiI.Text = vZeroI.Angle.ToString(format);
+                txt_scZeroI.Text = vZeroI.Amplitude.ToString(format);
+                txt_scZeroPhiI.Text = vZeroI.Phase.ToString(format);
             }
 
         }

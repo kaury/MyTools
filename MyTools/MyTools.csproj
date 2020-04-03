@@ -54,6 +54,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhaseSequence.cs" />
     <Compile Include="PicHelper.cs" />
     <Compile Include="Polar.cs" />
     <Compile Include="PowerHelper.cs" />

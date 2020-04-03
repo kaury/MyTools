@@ -8,7 +8,7 @@ namespace MyTools
     /// <summary>
     /// polar coordinates
     /// </summary>
-    class Polar
+    public class Polar
     {
         #region polar coordinates
 
